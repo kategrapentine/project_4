@@ -20,7 +20,7 @@ setTimeout( () => console.log("Time is up!"), 2000);
 
 let areWeThereYet = () => console.log('Are we there yet?');
 
-//setInterval(areWeThereYet, 5000);
+setInterval(areWeThereYet, 5000);
 
 //function that takes a callback:
 
@@ -41,11 +41,10 @@ processSplicedValue(strings, 0, alert);
 
 //passes an anonymous function into the function to alert the spliced value: 
 
-let anonymousFunction = () => alert;
-processSplicedValue(strings, 0, anonymousFunction);
-
+processSplicedValue(strings, 0, (splice) => alert(splice));
 
 //My created function takes the element and creates sentances that go along with it as if it were having a converation:
+
 function myCallBack(element){
     setTimeout( () => console.log(`${element}!`), 3000);
     setTimeout( () => console.log('That\'s a way you can say "hello".'), 4500);
